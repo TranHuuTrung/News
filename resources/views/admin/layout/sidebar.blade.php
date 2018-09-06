@@ -26,44 +26,65 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
       <li class="active treeview">
-        <a href="#">
-          <i class="fa fa-dashboard"></i> <span>Category</span>
+        <a href="admin/theloai/danhsach">
+          <i class="fa fa-dashboard"></i> <span>Thể loại</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="active"><a href="#"><i class="fa fa-circle-o"></i> List</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Add</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>Edit</a></li>
+          <li class="active"><a href="admin/theloai/danhsach"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+          <li><a href="admin/theloai/them"><i class="fa fa-circle-o"></i>Thêm mới</a></li>
         </ul>
       </li>
       <li class="treeview">
-        <a href="#">
-          <i class="fa fa-table"></i> <span>News</span>
+        <a href="admin/loaitin/danhsach">
+          <i class="fa fa-list-alt"></i> <span>Loại tin</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> List</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Add</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Edit</a></li>
+          <li class="active"><a href="admin/loaitin/danhsach"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+          <li><a href="admin/loaitin/them"><i class="fa fa-circle-o"></i>Thêm mới</a></li>
         </ul>
       </li>
       <li class="treeview">
-          <a href="#">
-            <i class="fa fa-users"></i> <span>Users</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> List</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Add</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Edit</a></li>
-          </ul>
-        </li>
+        <a href="admin/slide/danhsach">
+          <i class="fa fa-sliders"></i> <span>Slide</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="active"><a href="admin/slide/danhsach"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+          <li><a href="admin/slide/them"><i class="fa fa-circle-o"></i>Thêm mới</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="admin/tintuc/danhsach">
+          <i class="fa fa-newspaper-o"></i> <span>Tin tức</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="active"><a href="admin/tintuc/danhsach"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+          <li><a href="admin/tintuc/them"><i class="fa fa-circle-o"></i>Thêm mới</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="admin/user/danhsach">
+          <i class="fa fa-users"></i> <span>Người dùng</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="admin/user/danhsach"><i class="fa fa-circle-o"></i> Danh sách</a></li>
+          <li><a href="admin/user/danhsach"><i class="fa fa-circle-o"></i> Thêm mới</a></li>
+        </ul>
+      </li>
       <li>
         <a href="#">
           <i class="fa fa-calendar"></i> <span>Calendar</span>

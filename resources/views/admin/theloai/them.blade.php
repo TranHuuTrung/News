@@ -33,7 +33,7 @@
 					<!-- /.box-body -->
 
 					<div class="box-footer">
-						<button type="button" class="btn btn-default btn-sm">Làm mới</button>
+						<button type="reset" class="btn btn-default btn-sm">Làm mới</button>
 						<button type="submit" class="btn btn-success btn-sm">Thêm</button>
 					</div>
 				</form>

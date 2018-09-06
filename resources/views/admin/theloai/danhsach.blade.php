@@ -8,6 +8,11 @@
 				<div class="box-header">
 					<h3 class="box-title">Danh sách các thể loại</h3>
 				</div>
+				@if (session('thongbao'))
+				<div class="alert alert-success alert-dismissible">
+					{{session('thongbao')}}
+				</div>
+				@endif
 				<!-- /.box-header -->
 				<div class="box-body">
 					<table id="tableTheloai" class="table table-bordered table-striped">
