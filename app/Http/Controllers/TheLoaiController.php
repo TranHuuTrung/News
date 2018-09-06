@@ -18,7 +18,22 @@ class TheLoaiController extends Controller
     }
 
     public function postThem(Request $request) {
-        echo $request->Ten;
+        $this->validate($request, 
+            [
+                'Ten' => 'required|min:3|max:100',
+            ],
+            [
+                'Ten.required'=>'Bạn chưa nhập tên thể loại',
+                'Ten.min'=>'Tên thể loại phải có độ dài từ 3 đến 100 kí tự',    
+                'Ten.max'=>'Tên thể loại phải có độ dài từ 3 đến 100 kí tự',
+            ]);
+        $theloai = new TheLoai;
+        $theloai->Ten = $request->Ten;
+        $theloai->TenKhongDau = changeTitle($request->Ten);
+        $theloai->save();
+
+        return redirect('admin/theloai/them')->with('thongbao', 'Thêm thể loại thành công!');
+
     }
 
     public function getSua() {
