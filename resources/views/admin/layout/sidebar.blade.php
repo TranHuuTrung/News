@@ -25,9 +25,14 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="active treeview">
+      <li class="active">
+        <a href="admin/trangchu">
+          <i class="fa fa-dashboard"></i> <span>Trang chủ</span>
+        </a>
+      </li>
+      <li class="treeview">
         <a href="admin/theloai/danhsach">
-          <i class="fa fa-dashboard"></i> <span>Thể loại</span>
+          <i class="fa fa-file-text-o"></i> <span>Thể loại</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>

@@ -24,7 +24,7 @@ class UserController extends Controller
         ]);
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect('admin/tintuc/danhsach');
+            return redirect('admin/trangchu');
         } else {
             return redirect('admin/dangnhap')->with('thongbao', 'Đăng nhập không thành công!');
         }
@@ -33,6 +33,10 @@ class UserController extends Controller
     public function getDangXuatAdmin() {
         Auth::logout();
         return redirect('admin/dangnhap');
+    }
+
+    public function getInfoAdmin() {
+        return view('admin.trangchu.trangchu');
     }
     //
     public function getDanhSach() {

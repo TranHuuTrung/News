@@ -20,6 +20,7 @@ Route::post('admin/dangnhap', 'UserController@postDangnhapAdmin');
 Route::get('admin/dangxuat', 'UserController@getDangXuatAdmin');
 
 Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
+    Route::get('trangchu', 'UserController@getInfoAdmin');
     //admin/theloai/danhsach
     Route::group(['prefix' => 'theloai'], function () {
         Route::get('danhsach', 'TheLoaiController@getDanhSach');
@@ -89,3 +90,9 @@ Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
         Route::get('loaitin/{idTheloai}', 'AjaxController@getLoaiTin');
     });
 });
+
+
+Route::get('trangchu', 'PagesController@trangchu');
+Route::get('lienhe', 'PagesController@lienhe');
+Route::get('loaitin/{id}/{TenKhongDau}.html', 'PagesController@loaitin');
+Route::get('tintuc/{id}/{TieuDeKhongDau}.html', 'PagesController@tintuc');

@@ -14,6 +14,6 @@ class TheLoai extends Model
     }
 
     public function tintuc(){
-        return $this->hasManyThrough('App\TinTuc', 'App\LoaiTin', 'idLoaiTin', 'idTheLoai', 'id');
+        return $this->hasManyThrough('App\TinTuc', 'App\LoaiTin', 'idTheLoai', 'idLoaiTin', 'id');
     }
 }
