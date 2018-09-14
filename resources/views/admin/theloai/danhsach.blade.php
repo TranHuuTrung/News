@@ -21,8 +21,7 @@
 								<th>ID</th>
 								<th>Tên</th>
 								<th>Tên không dấu</th>
-								<th>Edit</th>
-								<th>Delete</th>
+								<th>Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -31,12 +30,16 @@
 								<td>{{$tl->id}}</td>
 								<td>{{$tl->Ten}}</td>
 								<td>{{$tl->TenKhongDau}}</td>
-								<td class="center">
+								<td class="text-center">
+									<a href="admin/theloai/sua/{{$tl->id}}"><button class="btn btn-sm btn-flat btn-warning"><i class="fa fa-pencil"></i>&nbsp; Sửa</button></a>
+									<a href="admin/theloai/xoa/{{$tl->id}}"><button class="btn btn-sm btn-flat btn-danger"><i class="fa fa-trash"></i>&nbsp; Xóa</button></a>
+								</td>
+								{{-- <td class="center">
 									<a href="admin/theloai/sua/{{$tl->id}}"><i class="fa fa-pencil"></i>&nbsp; Sửa</a>
-								</td>
-								<td class="center">
+								</td> --}}
+								{{-- <td class="center">
 									<a href="admin/theloai/xoa/{{$tl->id}}"><i class="fa fa-trash"></i>&nbsp; Xóa</a>
-								</td>
+								</td> --}}
 							</tr>
 							@endforeach
 						</tbody>
