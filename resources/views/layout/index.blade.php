@@ -33,7 +33,7 @@
   <!-- Bootstrap Core JavaScript -->
   <script src="front_asset/js/bootstrap.min.js"></script>
   <script src="front_asset/js/my.js"></script>
-  @yield('jquery')
+  @yield('script')
 </body>
 
 </html>

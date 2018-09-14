@@ -1,7 +1,5 @@
-
-
- <!-- Navigation -->
- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -24,31 +22,34 @@
         </li>
       </ul>
 
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-left" action="timkiem" method="GET">
+        {{-- <input type="hidden" name="_token" value="{{csrf_token()}}"> --}}
+        @csrf
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" name="tukhoa" placeholder="tìm kiếm">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Tìm</button>
       </form>
 
       <ul class="nav navbar-nav pull-right">
-        <li>
-          <a href="#">Đăng ký</a>
-        </li>
-        <li>
-          <a href="#">Đăng nhập</a>
-        </li>
-        <li>
-          <a>
-            <span class ="glyphicon glyphicon-user"></span>
-            Tran Huu Trung
-          </a>
-        </li>
-
-        <li>
-          <a href="#">Đăng xuất</a>
-        </li>
-
+        @if (Auth::check())
+          <li>
+            <a href="nguoidung">
+              <span class ="glyphicon glyphicon-user"></span>
+              {{Auth::user()->name}}
+              </a>
+          </li>
+          <li>
+            <a href="dangxuat">Đăng xuất</a>
+          </li>
+        @else
+          <li>
+            <a href="dangki">Đăng ký</a>
+          </li>
+          <li>
+            <a href="dangnhap">Đăng nhập</a>
+          </li>
+        @endif
       </ul>
     </div>
     <!-- /.navbar-collapse -->

@@ -25,15 +25,21 @@
       <hr>
       <!-- Blog Comments -->
       <!-- Comments Form -->
+      @if (Auth::check())
       <div class="well">
         <h4>Viết bình luận ...<span class="glyphicon glyphicon-pencil"></span></h4>
-        <form role="form">
+        @if (session('thongbao'))
+        <p style="color: green">{{session('thongbao')}}</p>            
+        @endif
+        <form action="comment/{{$tintuc->id}}" method="POST">
+          <input type="hidden" name="_token" value="{{csrf_token()}}">
           <div class="form-group">
-            <textarea class="form-control" rows="3"></textarea>
+            <textarea class="form-control" name="noidung" rows="3"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Gửi</button>
         </form>
       </div>
+      @endif
 
       <hr>
 
@@ -93,12 +99,12 @@
             </div>
             <div class="col-md-7">
               <a href="tintuc/{{$tnb->id}}/{{$tnb->TieuDeKhongDau}}.html"><b>{!!$tnb->TieuDe!!}</b></a>
-            </div>  
+            </div>
             <div class="break"></div>
           </div>
           <!-- end item -->
           @endforeach
-         
+
         </div>
       </div>
 

@@ -20,7 +20,11 @@ Route::post('admin/dangnhap', 'UserController@postDangnhapAdmin');
 Route::get('admin/dangxuat', 'UserController@getDangXuatAdmin');
 
 Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
-    Route::get('trangchu', 'UserController@getInfoAdmin');
+    // Route::get('trangchu', 'UserController@getInfoAdmin');
+    Route::get('trangchu',[
+        'uses'=>'UserController@getInfoAdmin',
+        'as'=>'admin.index'
+    ]);
     //admin/theloai/danhsach
     Route::group(['prefix' => 'theloai'], function () {
         Route::get('danhsach', 'TheLoaiController@getDanhSach');
@@ -96,3 +100,14 @@ Route::get('trangchu', 'PagesController@trangchu');
 Route::get('lienhe', 'PagesController@lienhe');
 Route::get('loaitin/{id}/{TenKhongDau}.html', 'PagesController@loaitin');
 Route::get('tintuc/{id}/{TieuDeKhongDau}.html', 'PagesController@tintuc');
+
+Route::get('dangnhap', 'PagesController@getDangNhap');
+Route::post('dangnhap', 'PagesController@postDangNhap');
+Route::post('comment/{id}', 'CommentController@postComment');
+Route::get('nguoidung', 'PagesController@getNguoiDung');
+Route::post('nguoidung', 'PagesController@postNguoiDung');
+Route::get('dangki', 'PagesController@getDangKi');
+Route::post('dangki', 'PagesController@postDangKi');
+Route::get('timkiem', 'PagesController@getTimkiem');
+
+Route::get('dangxuat', 'PagesController@getDangXuat');
